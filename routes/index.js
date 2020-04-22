@@ -21,4 +21,13 @@ router.get('/products', (req, res, next) => {
     });
 });
 
+router.post('/new-product', (req, res, next) => {
+ const { item } = req.body;
+ items.push({
+     id : items.length + 1,
+     name : item
+ });
+ res.redirect('/products')
+})
+
 module.exports = router;
