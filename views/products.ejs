@@ -1,22 +1,24 @@
 <%- include('partials/header'); -%>
 
 
-    <h1><%= title  %></h1>
-    <ul>
-        <% for(var i = 0; i < items .length; i++) { %>
-            <li><%= items[i].name %></li>
-        <%  } %>
-    </ul>
-
-    <h3>Add a New Product</h3>
-
-    <form action="/new-product" method="POST">
-        <input type="text" name="item" id="item">
-        <button>
-            Add
-        </button>
-    </form>
-
+    <div class="products__container">
+        <h1 class="products"><%= title  %></h1>
+        <ul>
+            <% for(var i = 0; i < items .length; i++) { %>
+                <li><%= items[i].name %></li>
+            <%  } %>
+        </ul>
+    
+        <h3>Add a New Product</h3>
+    
+        <form action="/new-product" method="POST">
+            <input type="text" name="item" id="item">
+            <button>
+                Add
+            </button>
+        </form>
+    
+    </div>
     <script>
         const txtItem = document.getElementById('item');
         txtItem.focus();

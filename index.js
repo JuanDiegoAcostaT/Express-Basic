@@ -4,6 +4,7 @@ const path = require('path')
 const routes = require('./routes/index')
 const bodyParser = require('body-parser');
 
+
 // Settings
 
 app.set('port', process.env.PORT || 3000);
@@ -32,7 +33,7 @@ app.use(routes);
 
 // Static Files
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 
 // Start The server
